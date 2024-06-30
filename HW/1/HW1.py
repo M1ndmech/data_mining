@@ -2,8 +2,8 @@ import requests
 import json
 
 # Ваши учетные данные API
-client_id = "RMALVHIRBVH3KAORAJNNB3PZKORL5KK02XIHMU2O1MH0FDEH"
-client_secret = "VRQXNVUUPYLHZKXY3ZOFAL3OBVGLJ2XMWZXDC3Z2MOSY5SDG"
+client_id = ""
+client_secret = ""
 
 
 # Конечная точка API
@@ -26,7 +26,7 @@ params_short = {
 
 headers = {
     "Accept": "application/json",
-    "Authorization": "fsq3R4LbR1wFfJp/0Gq+4ErE7lJiNeaS80qHZNX0rdFiUsI="
+    "Authorization": ""
 }
 
 # Отправка запроса API и получение ответа
