@@ -66,8 +66,6 @@ ITEM_PIPELINES = {
     "scrapy.pipelines.images.ImagesPipeline": 1,
 }
 IMAGES_STORE = 'images'
-BASE_WIDTH = 1280
-DOWNLOADER_DELAY: 2
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

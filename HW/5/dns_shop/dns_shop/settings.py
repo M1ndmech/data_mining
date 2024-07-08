@@ -25,23 +25,20 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 3
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+#COOKIES_ENABLED = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
-    "Accept": ["text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"],
-    "Accept-Language": ["ru"],
-    'Accept-Encoding': ['gzip,deflate,br'],
-    'Referer': 'http://www.google.com' 
+    'Referer': 'https://www.dns-shop.ru/',
 }
 
 # Enable or disable spider middlewares
@@ -88,8 +85,7 @@ DEFAULT_REQUEST_HEADERS = {
 #HTTPCACHE_DIR = "httpcache"
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = "scrapy.extensions.httpcache.FilesystemCacheStorage"
-HTTPERROR_ALLOWED_CODES = [404]
-HTTPERROR_ALLOWED_CODES = [405]
+
 HTTPERROR_ALLOWED_CODES = [401]
 # Set settings whose default value is deprecated to a future-proof value
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"

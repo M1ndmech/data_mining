@@ -15,7 +15,7 @@ client.execute('CREATE DATABASE IF NOT EXISTS scraping')
 # Создание основной таблицы 'crashes'
 client.execute('''
 CREATE TABLE IF NOT EXISTS scraping.books (
-    id VARCHAR(255) DEFAULT generateUUIDv4(),
+    id UUID,
     title String,
     price Float64,
     stock Int64,           
@@ -39,11 +39,11 @@ for item in data:
         id, title, price,
         stock, description
     ) VALUES""",
-    [("DEFAULT",
-      item['title'] or "",
-      item['price'] or 0,
-      item['stock'] or 0,
-      item['description'] or "",
+    [(uuid.uuid4(),
+      item['title'],
+      item['price'],
+      item['stock'],
+      item['description'],
       )])
 
 print("Данные введены успешно.")
